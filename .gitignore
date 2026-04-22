@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+
+# Local raw and generated data
+/data/raw/
+/data/interim/
+/data/processed/
+/output/figures/
+/output/task1_run_summary.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db

@@ -24,9 +24,9 @@
 
 ## 项目结构
 ```text
-├── Task1-preprocess/   # 任务一：DEAP 原始 BDF 预处理工程
+├── Task1-preprocess/   # 任务一预处理，以及任务二建模数据导出
 ├── README.md           # 仓库总说明
 └── requirements.txt    # 仓库公共依赖清单
 ```
 
-任务一的运行说明、数据目录说明和输出目录说明都在 `Task1-preprocess/` 内。
+任务一运行、数据放置、输出文件和任务二数据导出说明都在 `Task1-preprocess/README.md` 内。

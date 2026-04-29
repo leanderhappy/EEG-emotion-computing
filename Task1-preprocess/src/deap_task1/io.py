@@ -34,7 +34,7 @@ def extract_subject_id(path: str) -> str:
 
 
 def resolve_default_data_root(project_root: Path) -> Path:
-    return project_root.parent / "data" / "raw" / "DEAP" / "data_original"
+    return project_root / "data" / "raw" / "DEAP" / "data_original"
 
 
 def build_output_layout(project_root: Path, subject_id: str) -> dict[str, Path]:

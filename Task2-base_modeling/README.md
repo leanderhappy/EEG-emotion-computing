@@ -43,6 +43,7 @@ python base-modeling-loto.py [--data_root DATA_ROOT] [--output_root OUTPUT_ROOT]
   --model_type {svm,rf,mlp}		模型类型（分别对应SVM, RandomForest, MLP）
   --task {binary,threeclass}	二分类 / 三分类
   --regression          		是否采用回归模式训练模型
+  --no_gridsearch				是否采用网格搜索超参数，若加入此项，则使用预设超参数
   --num_repeats NUM_REPEATS		重复实验次数N，默认10
 ```
 

@@ -180,14 +180,9 @@ def base_modeling_regression(X_train, y_train, model_type, use_gridsearch=True):
         return_train_score=False
     )
     
-    # # 执行网格搜索
-    # print(f"开始{model_type.upper()}网格搜索...")
+    print("Begin grid search.")
     grid_search.fit(X_train, y_train)
-    
-    # # 输出最佳参数
-    # print(f"最佳参数: {grid_search.best_params_}")
-    # print(f"最佳分数: {grid_search.best_score_:.4f}")
-    
+
     return grid_search.best_estimator_
 
 def base_modeling_classify(X_train, y_train, model_type, use_gridsearch=True, cv_splits=3, scoring='accuracy'):
@@ -274,6 +269,7 @@ def base_modeling_classify(X_train, y_train, model_type, use_gridsearch=True, cv
         error_score='raise'  # 参数组合出错时抛出异常
     )
     
+    print("Begin grid search.")
     grid_search.fit(X_train, y_train)
     return grid_search.best_estimator_
 
@@ -328,12 +324,16 @@ def base_modeling_classify(X_train, y_train, model_type, use_gridsearch=True, cv
 #     model.fit(X_train, y_train)
 #     return model
 
-def run_base_modeling_loto(data_root, output_root, num_repeats=1, model_type="rf", task='binary', regression=True, seed=42):
+def run_base_modeling_loto(
+        data_root, output_root, 
+        num_repeats=1, model_type="rf", task='binary', 
+        use_gridsearch=True, regression=True, seed=42
+    ):
     set_seed(seed)
     output_root = Path(output_root) / (task+"-loto") / (model_type+"-regression" if regression else model_type)
     output_root.mkdir(parents=True, exist_ok=True)
     print("Output root:", output_root)
-    
+
     # 加载数据
     print("Loading data.")
     X_all, y_all = load_data(data_root)
@@ -368,11 +368,11 @@ def run_base_modeling_loto(data_root, output_root, num_repeats=1, model_type="rf
             X_test = selector.transform(X_test)
 
             if regression:
-                model = base_modeling_regression(X_train, y_train, model_type)
+                model = base_modeling_regression(X_train, y_train, model_type, use_gridsearch)
                 y_train_pred = classify(model.predict(X_train), task)
                 y_test_pred = classify(model.predict(X_test), task)
             else:
-                model = base_modeling_classify(X_train, y_train_category, model_type)
+                model = base_modeling_classify(X_train, y_train_category, model_type, use_gridsearch)
                 y_train_pred = model.predict(X_train)
                 y_test_pred = model.predict(X_test)
             
@@ -486,6 +486,12 @@ if __name__ == "__main__":
         help='是否采用回归模式训练模型'
     )
     parser.add_argument(
+        "--no_gridsearch", 
+        action="store_true",
+        default=False,
+        help='是否采用网格搜索超参数，若加入此项，则使用预设超参数'
+    )
+    parser.add_argument(
         "--num_repeats",
         type=int,
         default=10,
@@ -500,5 +506,6 @@ if __name__ == "__main__":
         model_type = args.model_type,
         task = args.task,
         regression = args.regression,
+        use_gridsearch=not args.no_gridsearch,
         seed = 1
     )

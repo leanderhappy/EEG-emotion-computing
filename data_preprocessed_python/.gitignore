@@ -1,0 +1,6 @@
+﻿# Ignore generated outputs and local experiments
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+*.dat

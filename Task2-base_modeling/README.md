@@ -71,13 +71,15 @@ for repeat in range(N):			# 重复N次实验
 - 如果采用回归模式训练，则加上`--regression`选项。在训练的时候直接用评分作为标签，预测时再根据模型输出分数判断它预测的类别（有时效果会好一点点）
 - 如果不采用回归模式，则不加入该选项。在训练前就把标签分类为离散类别，直接使用离散类别标签训练
 
+## 是否使用官方预处理数据集训练
+
+若希望使用官方预处理数据集训练，则将`--data_root`设置为`official`。
+
+（实测使用官方预处理数据集训练，测试集似乎准确率更高？）
+
 ## 输出文件格式
 
 `base-modeling-merged.py`输出文件为`Task2-base_modeling\output\{预处理数据来源}\{task}-{split}\{model_type}[-regression]`：
 
 - `confusion_matrix.png`：混淆矩阵图像
 - `results.txt`：日志输出，包括训练/测试准确率、精确度、召回率、 f1-score等
-
-## 是否使用官方预处理数据集训练
-
-若希望使用官方预处理数据集训练，则将`--data_root`设置为`data_preprocessed_python`所在目录（例：`EEG-emotion-computing\data_preprocessed_python`）。（实测使用官方预处理数据集训练，测试集似乎准确率更高？）

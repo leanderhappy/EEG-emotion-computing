@@ -1,0 +1,20 @@
+# Python caches and virtual envs
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+
+# data_preprocessed_python ignores
+data_preprocessed_python/*.dat
+
+# Task1-preprocess ignores
+Task1-preprocess/data/raw/
+Task1-preprocess/data/interim/
+Task1-preprocess/data/processed/
+Task1-preprocess/data/task2/
+Task1-preprocess/output/figures/
+Task1-preprocess/output/*.csv
+
+# Task2-base_modeling ignores
+
+# Task3-transfer_learning ignores

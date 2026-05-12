@@ -1,0 +1,5 @@
+data_source,task,n_pairs,no_transfer_mean,no_transfer_std,with_transfer_mean,with_transfer_std,mean_difference,n_improved,n_degraded,n_unchanged
+official,binary,32,0.481250,0.110397,0.497656,0.114113,0.016406,11,12,9
+official,threeclass,32,0.341406,0.112258,0.366406,0.134717,0.025000,14,10,8
+task1,binary,32,0.505469,0.095143,0.537500,0.097026,0.032031,15,6,11
+task1,threeclass,32,0.385937,0.119396,0.350781,0.114306,-0.035156,13,15,4

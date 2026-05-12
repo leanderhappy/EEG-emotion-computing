@@ -27,8 +27,9 @@
 ├── data_preprocessed_python/   # DEAP数据集官方预处理结果存放目录（需自行加入数据）
 ├── Task1-preprocess/   		# 任务一预处理，以及任务二建模数据导出
 ├── Task2-base_modeling/   		# 任务二基础建模
+├── Task3-transfer_learning/    # 任务三跨被试迁移学习实验与结果可视化
 ├── README.md           		# 仓库总说明
 └── requirements.txt    		# 仓库公共依赖清单
 ```
 
-任务一运行、数据放置、输出文件和任务二数据导出说明都在 `Task1-preprocess/README.md` 内。
+各任务的运行方式、数据放置和输出说明见对应任务目录下的 `README.md`。

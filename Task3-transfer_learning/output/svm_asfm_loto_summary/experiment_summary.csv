@@ -1,0 +1,5 @@
+Dataset,Task,N_pairs,Source_Only_Acc,Transfer_Acc,Mean_Gain,Win_Rate,Win_Count,Loss_Count,Zero_Count,Max_Gain,Min_Gain,Median_Gain,Std_Gain
+task1,binary,32,0.4883,0.5344,0.0461,0.5938,19,10,3,0.4,-0.25,0.0375,0.1349
+task1,threeclass,32,0.3492,0.3547,0.0055,0.4062,13,16,3,0.325,-0.15,-0.0125,0.0954
+official,binary,32,0.5055,0.5922,0.0867,0.7188,23,7,2,0.425,-0.175,0.0875,0.1366
+official,threeclass,32,0.35,0.3758,0.0258,0.375,12,12,8,0.275,-0.3,0.0,0.1214

@@ -1,0 +1,5 @@
+Dataset,Task,>0.20,0.10~0.20,0.05~0.10,0~0.05,0,-0.05~0,-0.10~-0.05,<-0.10
+task1,binary,2,8,4,5,3,3,4,3
+task1,threeclass,2,0,2,9,3,12,2,2
+official,binary,6,7,4,6,2,4,0,3
+official,threeclass,1,8,2,1,8,8,0,4

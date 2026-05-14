@@ -1,0 +1,173 @@
+========== experiment setup ==========
+data_root: E:\EEG-emotion-computing\data_preprocessed_python
+task: binary
+model_type: svm
+method: asfm
+transfer_method: window-level ASFM + trial-level aggregation
+asfm_d: 22
+asfm_num_pl_iterations: 3
+asfm_pseudo_tau: 0.75
+asfm_pseudo_tau_decay: 0.05
+asfm_pseudo_tau_min: 0.55
+asfm_pseudo_weight: 0.5
+asfm_max_pseudo_per_class: 30
+asfm_pseudo_imbalance_ratio: 2.0
+asfm_pseudo_single_class_cap: 8
+asfm_source_weight_clip: [0.5, 2.0]
+asfm_window_seconds: 4.0
+asfm_window_step_seconds: 2.0
+feature_k: 18
+num_repeats: 1
+evaluation_mode: LOTO (all 32 subjects as targets)
+source_select_max_samples: 400
+source_select_coarse_topk: 5
+use_gridsearch: False
+subject_count: 32
+target_label_usage: labels are used only for final evaluation
+pair_sampling_mode: loto_best_source
+selected_targets: ['s01', 's02', 's03', 's04', 's05', 's06', 's07', 's08', 's09', 's10', 's11', 's12', 's13', 's14', 's15', 's16', 's17', 's18', 's19', 's20', 's21', 's22', 's23', 's24', 's25', 's26', 's27', 's28', 's29', 's30', 's31', 's32']
+selected_pairs: [('s03', 's01'), ('s26', 's02'), ('s05', 's03'), ('s10', 's04'), ('s15', 's05'), ('s10', 's06'), ('s16', 's07'), ('s16', 's08'), ('s14', 's09'), ('s16', 's10'), ('s22', 's11'), ('s18', 's12'), ('s15', 's13'), ('s09', 's14'), ('s16', 's15'), ('s15', 's16'), ('s13', 's17'), ('s07', 's18'), ('s15', 's19'), ('s27', 's20'), ('s15', 's21'), ('s25', 's22'), ('s16', 's23'), ('s28', 's24'), ('s14', 's25'), ('s16', 's26'), ('s16', 's27'), ('s15', 's28'), ('s20', 's29'), ('s08', 's30'), ('s07', 's31'), ('s15', 's32')]
+========== pair 1/32: s03 -> s01 ==========
+    proxy_a_distance: 2.0000 -> 1.9833 (delta=-0.0167)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 2/32: s26 -> s02 ==========
+    proxy_a_distance: 2.0000 -> 1.9833 (delta=-0.0167)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 3/32: s05 -> s03 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 4/32: s10 -> s04 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 5/32: s15 -> s05 ==========
+    proxy_a_distance: 1.9500 -> 1.9667 (delta=0.0167)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 6/32: s10 -> s06 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 7/32: s16 -> s07 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 8/32: s16 -> s08 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 9/32: s14 -> s09 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 10/32: s16 -> s10 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 11/32: s22 -> s11 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 12/32: s18 -> s12 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 13/32: s15 -> s13 ==========
+    proxy_a_distance: 1.9333 -> 1.9333 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 14/32: s09 -> s14 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 15/32: s16 -> s15 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 16/32: s15 -> s16 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 17/32: s13 -> s17 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 18/32: s07 -> s18 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 19/32: s15 -> s19 ==========
+    proxy_a_distance: 1.9667 -> 1.9833 (delta=0.0167)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 20/32: s27 -> s20 ==========
+    proxy_a_distance: 2.0000 -> 1.9833 (delta=-0.0167)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 21/32: s15 -> s21 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 22/32: s25 -> s22 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 23/32: s16 -> s23 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 24/32: s28 -> s24 ==========
+    proxy_a_distance: 2.0000 -> 1.9833 (delta=-0.0167)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 25/32: s14 -> s25 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 26/32: s16 -> s26 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 27/32: s16 -> s27 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 28/32: s15 -> s28 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 29/32: s20 -> s29 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 30/32: s08 -> s30 ==========
+    proxy_a_distance: 1.9500 -> 1.8833 (delta=-0.0667)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 31/32: s07 -> s31 ==========
+    proxy_a_distance: 2.0000 -> 2.0000 (delta=0.0000)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== pair 32/32: s15 -> s32 ==========
+    proxy_a_distance: 1.9500 -> 1.9833 (delta=0.0333)
+    Final training set: 1160 source windows (no pseudo-labeling, score blending)
+========== summary ==========
+pair_count: 32
+source_only_mean_acc: 0.5055
+transfer_mean_acc: 0.5922
+transfer_gain_vs_source_only: 0.0867
+transfer_win_rate_vs_source_only: 0.7188
+mean_pseudo_labeled_per_pair: 0.0
+========== source-only report ==========
+
+              precision    recall  f1-score   support
+
+           N       0.44      0.37      0.40       572
+           P       0.55      0.61      0.58       708
+
+    accuracy                           0.51      1280
+   macro avg       0.49      0.49      0.49      1280
+weighted avg       0.50      0.51      0.50      1280
+
+========== transfer report ==========
+
+              precision    recall  f1-score   support
+
+           N       0.54      0.62      0.57       572
+           P       0.65      0.57      0.61       708
+
+    accuracy                           0.59      1280
+   macro avg       0.59      0.59      0.59      1280
+weighted avg       0.60      0.59      0.59      1280
+
+========== best pairs ==========
+source_subject target_subject  source_only_acc  transfer_acc  gain  target_size  num_pseudo_labeled
+           s07            s18             0.40         0.825 0.425         40.0                 0.0
+           s15            s13             0.45         0.775 0.325         40.0                 0.0
+           s16            s10             0.50         0.750 0.250         40.0                 0.0
+           s10            s06             0.25         0.500 0.250         40.0                 0.0
+           s08            s30             0.30         0.525 0.225         40.0                 0.0
+========== worst pairs ==========
+source_subject target_subject  source_only_acc  transfer_acc   gain  target_size  num_pseudo_labeled
+           s28            s24            0.450         0.400 -0.050         40.0                 0.0
+           s16            s23            0.625         0.575 -0.050         40.0                 0.0
+           s13            s17            0.550         0.425 -0.125         40.0                 0.0
+           s16            s27            0.700         0.550 -0.150         40.0                 0.0
+           s16            s07            0.700         0.525 -0.175         40.0                 0.0
+repeat_results_csv: E:\EEG-emotion-computing\Task3-transfer_learning\output\official-preprocess\binary\svm-asfm\window-4s-step-2s-trial-agg\loto-best-source\repeat_results.csv
+pair_summary_csv: E:\EEG-emotion-computing\Task3-transfer_learning\output\official-preprocess\binary\svm-asfm\window-4s-step-2s-trial-agg\loto-best-source\pair_summary.csv
+source_selection_summary_csv: E:\EEG-emotion-computing\Task3-transfer_learning\output\official-preprocess\binary\svm-asfm\window-4s-step-2s-trial-agg\loto-best-source\source_selection_summary.csv
+source_only_confusion_matrix: E:\EEG-emotion-computing\Task3-transfer_learning\output\official-preprocess\binary\svm-asfm\window-4s-step-2s-trial-agg\loto-best-source\source_only_confusion_matrix.png
+transfer_confusion_matrix: E:\EEG-emotion-computing\Task3-transfer_learning\output\official-preprocess\binary\svm-asfm\window-4s-step-2s-trial-agg\loto-best-source\transfer_confusion_matrix.png

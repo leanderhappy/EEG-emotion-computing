@@ -1,0 +1,134 @@
+========== experiment setup ==========
+data_root: E:\EEG-emotion-computing\Task1-preprocess\data\task2\npz
+task: binary
+model_type: rf
+method: asfm
+transfer_method: window-level ASFM + trial-level aggregation (RF)
+feature_selection: DI (MI + KS, alpha=0.5)
+score_blending: none (aligned-only RF)
+rf_regularization: max_depth=10, min_samples_split=5
+negative_transfer_detection: none (removed)
+asfm_d: 18
+asfm_source_weight_clip: [0.5, 2.0]
+asfm_window_seconds: 4.0
+asfm_window_step_seconds: 2.0
+feature_k: 18
+num_repeats: 1
+num_random_targets: 0
+use_gridsearch: False
+subject_count: 32
+target_label_usage: labels are used only for final evaluation
+pair_sampling_mode: loto_all_targets
+selected_targets: ['s01', 's02', 's03', 's04', 's05', 's06', 's07', 's08', 's09', 's10', 's11', 's12', 's13', 's14', 's15', 's16', 's17', 's18', 's19', 's20', 's21', 's22', 's23', 's24', 's25', 's26', 's27', 's28', 's29', 's30', 's31', 's32']
+selected_pairs: [('s20', 's01'), ('s15', 's02'), ('s10', 's03'), ('s22', 's04'), ('s26', 's05'), ('s28', 's06'), ('s31', 's07'), ('s12', 's08'), ('s07', 's09'), ('s03', 's10'), ('s10', 's11'), ('s24', 's12'), ('s03', 's13'), ('s12', 's14'), ('s03', 's15'), ('s09', 's16'), ('s06', 's17'), ('s02', 's18'), ('s18', 's19'), ('s18', 's20'), ('s18', 's21'), ('s18', 's22'), ('s27', 's23'), ('s30', 's24'), ('s29', 's25'), ('s29', 's26'), ('s26', 's27'), ('s29', 's28'), ('s10', 's29'), ('s26', 's30'), ('s07', 's31'), ('s10', 's32')]
+========== pair 1/32: s20 -> s01 ==========
+    proxy_a_distance: 1.8167 -> 1.9333 (delta=0.1167)
+========== pair 2/32: s15 -> s02 ==========
+    proxy_a_distance: 1.9833 -> 1.9667 (delta=-0.0167)
+========== pair 3/32: s10 -> s03 ==========
+    proxy_a_distance: 1.7167 -> 1.9333 (delta=0.2167)
+========== pair 4/32: s22 -> s04 ==========
+    proxy_a_distance: 1.6833 -> 1.8333 (delta=0.1500)
+========== pair 5/32: s26 -> s05 ==========
+    proxy_a_distance: 1.8667 -> 1.8833 (delta=0.0167)
+========== pair 6/32: s28 -> s06 ==========
+    proxy_a_distance: 1.9833 -> 1.9000 (delta=-0.0833)
+========== pair 7/32: s31 -> s07 ==========
+    proxy_a_distance: 1.9333 -> 1.9500 (delta=0.0167)
+========== pair 8/32: s12 -> s08 ==========
+    proxy_a_distance: 1.4500 -> 1.5333 (delta=0.0833)
+========== pair 9/32: s07 -> s09 ==========
+    proxy_a_distance: 1.9667 -> 1.9667 (delta=0.0000)
+========== pair 10/32: s03 -> s10 ==========
+    proxy_a_distance: 1.9000 -> 1.8500 (delta=-0.0500)
+========== pair 11/32: s10 -> s11 ==========
+    proxy_a_distance: 1.5000 -> 1.8667 (delta=0.3667)
+========== pair 12/32: s24 -> s12 ==========
+    proxy_a_distance: 1.7667 -> 1.6667 (delta=-0.1000)
+========== pair 13/32: s03 -> s13 ==========
+    proxy_a_distance: 1.9833 -> 1.9833 (delta=0.0000)
+========== pair 14/32: s12 -> s14 ==========
+    proxy_a_distance: 1.4500 -> 1.6167 (delta=0.1667)
+========== pair 15/32: s03 -> s15 ==========
+    proxy_a_distance: 1.8667 -> 1.9167 (delta=0.0500)
+========== pair 16/32: s09 -> s16 ==========
+    proxy_a_distance: 1.6500 -> 1.8000 (delta=0.1500)
+========== pair 17/32: s06 -> s17 ==========
+    proxy_a_distance: 1.7167 -> 1.8167 (delta=0.1000)
+========== pair 18/32: s02 -> s18 ==========
+    proxy_a_distance: 1.7667 -> 1.8667 (delta=0.1000)
+========== pair 19/32: s18 -> s19 ==========
+    proxy_a_distance: 1.6667 -> 1.4500 (delta=-0.2167)
+========== pair 20/32: s18 -> s20 ==========
+    proxy_a_distance: 1.3000 -> 1.7833 (delta=0.4833)
+========== pair 21/32: s18 -> s21 ==========
+    proxy_a_distance: 1.9167 -> 2.0000 (delta=0.0833)
+========== pair 22/32: s18 -> s22 ==========
+    proxy_a_distance: 1.8500 -> 1.7667 (delta=-0.0833)
+========== pair 23/32: s27 -> s23 ==========
+    proxy_a_distance: 1.9167 -> 1.9500 (delta=0.0333)
+========== pair 24/32: s30 -> s24 ==========
+    proxy_a_distance: 1.9167 -> 2.0000 (delta=0.0833)
+========== pair 25/32: s29 -> s25 ==========
+    proxy_a_distance: 1.9000 -> 1.9500 (delta=0.0500)
+========== pair 26/32: s29 -> s26 ==========
+    proxy_a_distance: 1.5333 -> 1.5833 (delta=0.0500)
+========== pair 27/32: s26 -> s27 ==========
+    proxy_a_distance: 1.7000 -> 1.6833 (delta=-0.0167)
+========== pair 28/32: s29 -> s28 ==========
+    proxy_a_distance: 1.8667 -> 1.9000 (delta=0.0333)
+========== pair 29/32: s10 -> s29 ==========
+    proxy_a_distance: 1.8833 -> 1.9833 (delta=0.1000)
+========== pair 30/32: s26 -> s30 ==========
+    proxy_a_distance: 1.9000 -> 1.9833 (delta=0.0833)
+========== pair 31/32: s07 -> s31 ==========
+    proxy_a_distance: 1.9500 -> 1.9000 (delta=-0.0500)
+========== pair 32/32: s10 -> s32 ==========
+    proxy_a_distance: 1.7667 -> 1.9667 (delta=0.2000)
+========== summary ==========
+pair_count: 32
+source_only_mean_acc: 0.5086
+transfer_mean_acc: 0.5289
+transfer_gain_vs_source_only: 0.0203
+transfer_win_rate_vs_source_only: 0.5312
+========== source-only report ==========
+
+              precision    recall  f1-score   support
+
+           N       0.45      0.48      0.46       572
+           P       0.56      0.54      0.55       708
+
+    accuracy                           0.51      1280
+   macro avg       0.51      0.51      0.51      1280
+weighted avg       0.51      0.51      0.51      1280
+
+========== transfer report ==========
+
+              precision    recall  f1-score   support
+
+           N       0.45      0.26      0.33       572
+           P       0.56      0.75      0.64       708
+
+    accuracy                           0.53      1280
+   macro avg       0.50      0.50      0.48      1280
+weighted avg       0.51      0.53      0.50      1280
+
+========== best pairs ==========
+source_subject target_subject  source_only_acc  transfer_acc  gain  target_size
+           s29            s26            0.400         0.600 0.200         40.0
+           s18            s22            0.375         0.550 0.175         40.0
+           s10            s29            0.425         0.575 0.150         40.0
+           s18            s21            0.400         0.525 0.125         40.0
+           s10            s03            0.450         0.550 0.100         40.0
+========== worst pairs ==========
+source_subject target_subject  source_only_acc  transfer_acc  gain  target_size
+           s28            s06             0.60          0.50 -0.10         40.0
+           s31            s07             0.50          0.40 -0.10         40.0
+           s18            s20             0.55          0.45 -0.10         40.0
+           s09            s16             0.60          0.45 -0.15         40.0
+           s03            s10             0.65          0.50 -0.15         40.0
+repeat_results_csv: E:\EEG-emotion-computing\Task3-transfer_learning\output\task1-preprocess\binary\rf-asfm\window-4s-step-2s-trial-agg\loto-32-targets-best-source\repeat_results.csv
+pair_summary_csv: E:\EEG-emotion-computing\Task3-transfer_learning\output\task1-preprocess\binary\rf-asfm\window-4s-step-2s-trial-agg\loto-32-targets-best-source\pair_summary.csv
+source_selection_summary_csv: E:\EEG-emotion-computing\Task3-transfer_learning\output\task1-preprocess\binary\rf-asfm\window-4s-step-2s-trial-agg\loto-32-targets-best-source\source_selection_summary.csv
+source_only_confusion_matrix: E:\EEG-emotion-computing\Task3-transfer_learning\output\task1-preprocess\binary\rf-asfm\window-4s-step-2s-trial-agg\loto-32-targets-best-source\source_only_confusion_matrix.png
+transfer_confusion_matrix: E:\EEG-emotion-computing\Task3-transfer_learning\output\task1-preprocess\binary\rf-asfm\window-4s-step-2s-trial-agg\loto-32-targets-best-source\transfer_confusion_matrix.png
